@@ -38,6 +38,17 @@ struct MainView: View {
                 }
                 .padding()
                 
+                NavigationLink(destination: FixedExpensesView()) {
+                    Text("Fixed Expenses")
+                        .font(.largeTitle) // Big text
+                        .padding()
+                        .background(Color.accentColor) // Background color
+                        .foregroundColor(.white) // Text color
+                        .cornerRadius(10) // Rounded corners
+                }
+                .padding()
+
+                
                 Button(action: {
                     showBudgetSheet = true
                 }) {
