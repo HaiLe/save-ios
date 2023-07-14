@@ -10,8 +10,6 @@ import SwiftUI
 @main
 struct saveApp: App {
     let persistenceController = PersistenceController.shared
-
-    // TODO: point the code to the hello world screen
     
     var body: some Scene {
         WindowGroup {
