@@ -11,9 +11,11 @@ import SwiftUI
 struct saveApp: App {
     let persistenceController = PersistenceController.shared
 
+    // TODO: point the code to the hello world screen
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
