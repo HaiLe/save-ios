@@ -11,11 +11,25 @@ struct MainView: View {
     @State private var showActionSheet = false
     @State private var showBudgetSheet = false
     
+    let currentMonth: String
+    
+    init() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM"
+        currentMonth = dateFormatter.string(from: Date())
+    }
+    
     var body: some View {
         NavigationView {
             VStack {
+                Text("\(currentMonth) Expenses")
+                Text("$250")
+                    .font(.system(size: 40)) // Makes the text large.
+                    .foregroundColor(.green) // Changes the text color to green.
+                    .padding() // Adds some padding around the text.
+
                 NavigationLink(destination: AddItemView()) {
-                    Text("Add an item")
+                    Text("Add an Expense")
                         .font(.largeTitle) // Big text
                         .padding()
                         .background(Color.accentColor) // Background color
