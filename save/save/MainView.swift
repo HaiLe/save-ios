@@ -29,7 +29,7 @@ struct MainView: View {
                     .padding() // Adds some padding around the text.
 
                 NavigationLink(destination: AddItemView()) {
-                    Text("Add an Expense")
+                    Text("Expense")
                         .font(.largeTitle) // Big text
                         .padding()
                         .background(Color.accentColor) // Background color
@@ -37,6 +37,21 @@ struct MainView: View {
                         .cornerRadius(10) // Rounded corners
                 }
                 .padding()
+                            
+                Button(action: {
+                    showBudgetSheet = true
+                }) {
+                    Text("Budget")
+                        .font(.largeTitle) // Big text
+                        .padding()
+                        .background(Color.accentColor) // Background color
+                        .foregroundColor(.white) // Text color
+                        .cornerRadius(10) // Rounded corners
+                }
+                .padding()
+                .sheet(isPresented: $showBudgetSheet) {
+                    AddBudgetView()
+                }
                 
                 NavigationLink(destination: FixedExpensesView()) {
                     Text("Fixed Expenses")
@@ -48,21 +63,6 @@ struct MainView: View {
                 }
                 .padding()
 
-                
-                Button(action: {
-                    showBudgetSheet = true
-                }) {
-                    Text("Add a budget")
-                        .font(.largeTitle) // Big text
-                        .padding()
-                        .background(Color.accentColor) // Background color
-                        .foregroundColor(.white) // Text color
-                        .cornerRadius(10) // Rounded corners
-                }
-                .padding()
-                .sheet(isPresented: $showBudgetSheet) {
-                    AddBudgetView()
-                }
             }
         }
     }
