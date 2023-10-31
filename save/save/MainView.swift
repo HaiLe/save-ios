@@ -10,6 +10,7 @@ import SwiftUI
 struct MainView: View {
     @State private var showActionSheet = false
     @State private var showBudgetSheet = false
+    @State private var showExpenseSheet = false
     
     let currentMonth: String
     
@@ -27,9 +28,25 @@ struct MainView: View {
                     .font(.system(size: 40)) // Makes the text large.
                     .foregroundColor(.green) // Changes the text color to green.
                     .padding() // Adds some padding around the text.
+                
+                Button(action: {
+                    showExpenseSheet = true
+                }) {
+                    Text("Add Expense")
+                        .font(.largeTitle) // Big text
+                        .padding()
+                        .background(Color.accentColor) // Background color
+                        .foregroundColor(.white) // Text color
+                        .cornerRadius(10) // Rounded corners
+                }
+                .padding()
+                .sheet(isPresented: $showExpenseSheet) {
+                    AddExpenseView()
+                }
+
 
                 NavigationLink(destination: ExpenseView()) {
-                    Text("Expense")
+                    Text("Monthly Expenses")
                         .font(.largeTitle) // Big text
                         .padding()
                         .background(Color.accentColor) // Background color
@@ -71,6 +88,13 @@ struct MainView: View {
 struct AddBudgetView: View {
     var body: some View {
         Text("This is where you can add budget related functionality")
+            .padding()
+    }
+}
+
+struct AddExpenseSheet: View {
+    var body: some View {
+        Text("Add expense view")
             .padding()
     }
 }
