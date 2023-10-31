@@ -28,7 +28,7 @@ struct MainView: View {
                     .foregroundColor(.green) // Changes the text color to green.
                     .padding() // Adds some padding around the text.
 
-                NavigationLink(destination: AddItemView()) {
+                NavigationLink(destination: ExpenseView()) {
                     Text("Expense")
                         .font(.largeTitle) // Big text
                         .padding()

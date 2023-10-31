@@ -19,6 +19,7 @@
 		272DA26B2A6188F7001BD77F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272DA26A2A6188F7001BD77F /* MainView.swift */; };
 		272DA26D2A61B3AA001BD77F /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272DA26C2A61B3AA001BD77F /* AddExpenseView.swift */; };
 		272DA26F2A61B6CE001BD77F /* FixedExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272DA26E2A61B6CE001BD77F /* FixedExpensesView.swift */; };
+		272DA2732A649879001BD77F /* ExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272DA2722A649879001BD77F /* ExpenseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		272DA26A2A6188F7001BD77F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		272DA26C2A61B3AA001BD77F /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
 		272DA26E2A61B6CE001BD77F /* FixedExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedExpensesView.swift; sourceTree = "<group>"; };
+		272DA2722A649879001BD77F /* ExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				272DA26A2A6188F7001BD77F /* MainView.swift */,
 				272DA26C2A61B3AA001BD77F /* AddExpenseView.swift */,
 				272DA26E2A61B6CE001BD77F /* FixedExpensesView.swift */,
+				272DA2722A649879001BD77F /* ExpenseView.swift */,
 			);
 			path = save;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				272DA26F2A61B6CE001BD77F /* FixedExpensesView.swift in Sources */,
 				272DA26B2A6188F7001BD77F /* MainView.swift in Sources */,
 				271F65FC2A61834D004EC0A5 /* saveApp.swift in Sources */,
+				272DA2732A649879001BD77F /* ExpenseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
